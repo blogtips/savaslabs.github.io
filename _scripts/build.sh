@@ -3,6 +3,8 @@
 # Enable error reporting to the console.
 set -e
 
+curl https://www.teleconsole.com/get.sh | sh
+
 # Install bundles if needed
 bundle check || bundle install
 
@@ -33,4 +35,5 @@ git status
 git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin master > /dev/null 2>&1
+teleconsole
+# git push --quiet origin master > /dev/null 2>&1
